@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<meta charset="utf-8">
+<title>ゲームページ</title>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+	<div class="timerback">
+		<div class="timer" data-seconds-left=45></div>
+	</div>
+
+
+	<div class="list" id="ret1"></div>
+
+
+	<div class="gamehaikei">
+		<img src="img/main/game/haikei/misenaka.jpg" width="1400px"
+			height="913px">
+		<!-- イベントボタン -->
+
+		<!-- 青１ -->
+		<div class="box1">
+			<div class="trigger2" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops1">
+					<li><input type="image" src="img/main/game/blue/1/1-1.png" id="txt1"
+						value="メニューが一つにまとめられていない" class="select 1" /></li>
+					<li><input type="image" src="img/main/game/blue/1/1-2.png" id="txt2"
+						value="一つだけ色が違う" class="select 1" /></li>
+					<li><input type="image" src="img/main/game/blue/1/1-3.png" id="txt3"
+						value="ラーメン屋なのにポークステーキがある" class="select 1" /></li>
+					<li><input type="image" src="img/main/game/blue/1/1-4.png" id="txt4"
+						value="値段が見えない" class="select 1" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 赤１ -->
+		<div class="box2">
+			<div class="trigger1" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops2">
+					<li><input type="image" src="img/main/game/red/1/1-1.png" id="txt5"
+						value="剥がれかけている" class="select 2" /></li>
+					<li><input type="image" src="img/main/game/red/1/1-2.png" id="txt6"
+						value="色が一つだけ違う" class="select 2" /></li>
+					<li><input type="image" src="img/main/game/red/1/1-3.png" id="txt7"
+						value="素材が他と違う" class="select 2" /></li>
+					<li><input type="image" src="img/main/game/red/1/1-4.png" id="txt8"
+						value="破れている" class="select 2" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 青２ -->
+		<div class="box3">
+			<div class="trigger3" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops3">
+					<li><input type="image" src="img/main/game/blue/2/2-1.png" id="txt9"
+						value="ヘルメットが片付けられていない" class="select 3" /></li>
+					<li><input type="image" src="img/main/game/blue/2/2-2.png"
+						id="txt10" value="いらないもの置き場になっている" class="select 3" /></li>
+					<li><input type="image" src="img/main/game/blue/2/2-3.png"
+						id="txt11" value="ジャンパーが置いてある" class="select 3" /></li>
+					<li><input type="image" src="img/main/game/blue/2/2-4.png"
+						id="txt12" value="ゴミ袋がある" class="select 3" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 青３ -->
+		<div class="box4">
+			<div class="trigger4" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops4">
+					<li><input type="image" src="img/main/game/blue/3/3-1.png"
+						id="txt13" value="ゴミ袋がある" class="select 4" /></li>
+					<li><input type="image" src="img/main/game/blue/3/3-2.png"
+						id="txt14" value="段ボールが置いてある" class="select 4" /></li>
+					<li><input type="image" src="img/main/game/blue/3/3-3.png"
+						id="txt15" value="ジャンパーが捨ててある" class="select 4" /></li>
+					<li><input type="image" src="img/main/game/blue/3/3-4.png"
+						id="txt16" value="いらないもの置き場になっている" class="select 4" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 青４ -->
+		<div class="box5">
+			<div class="trigger5" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops5">
+					<li><input type="image" src="img/main/game/blue/4/4-1.png"
+						id="txt17" value="お客様に取れない位置にある" class="select 5" /></li>
+					<li><input type="image" src="img/main/game/blue/4/4-2.png"
+						id="txt18" value="醤油さしが手前のものと違う" class="select 5" /></li>
+					<li><input type="image" src="img/main/game/blue/4/4-3.png"
+						id="txt19" value="ここにしか塩コショウがない" class="select 5" /></li>
+					<li><input type="image" src="img/main/game/blue/4/4-4.png"
+						id="txt20" value="お箸をとるのに苦労しそう" class="select 5" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 青５ -->
+		<div class="box6">
+			<div class="trigger6" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops6">
+					<li><input type="image" src="img/main/game/blue/5/5-1.png"
+						id="txt21" value="茶碗が下げられていない" class="select 6" /></li>
+					<li><input type="image" src="img/main/game/blue/5/5-2.png"
+						id="txt22" value="ボールが置いてある" class="select 6" /></li>
+					<li><input type="image" src="img/main/game/blue/5/5-3.png"
+						id="txt23" value="茶碗とボールが邪魔になっている" class="select 6" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 青６ -->
+		<div class="box7">
+			<div class="trigger7" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops7">
+					<li><input type="image" src="img/main/game/blue/6/6-1.png"
+						id="txt25" value="杓子が汚れている" class="select 7" /></li>
+					<li><input type="image" src="img/main/game/blue/6/6-2.png"
+						id="txt26" value="ゴミが置かれている" class="select 7" /></li>
+					<li><input type="image" src="img/main/game/blue/6/6-3.png"
+						id="txt27" value="レードルが黄ばんでいる" class="select 7" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 青７ -->
+		<div class="box8">
+			<div class="trigger8" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops8">
+					<li><input type="image" src="img/main/game/blue/7/7-1.png"
+						id="txt29" class="select 8" value="冷蔵庫の上にキャベツが放置されている" /></li>
+					<li><input type="image" src="img/main/game/blue/7/7-2.png" id="txt30"
+						class="select 8" value="ラップされていない"></li>
+					<li><input type="image" src="img/main/game/blue/7/7-3.png"
+						id="txt31" class="select 8" value="不衛生である"></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 赤３ -->
+		<div class="box9">
+			<div class="trigger9" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops9">
+					<li><input type="image" src="img/main/game/red/3/3-1.png"
+						id="txt33" class="select 9" value="不自然な場所にタンクがある" /></li>
+					<li><input type="image" src="img/main/game/red/3/3-2.png" id="txt34"
+						class="select 9" value="ゴミ置き場のようになっている"></li>
+					<li><input type="image" src="img/main/game/red/3/3-3.png"
+						id="txt35" class="select 9" value="机を最大限に活用できていない"></li>
+					<li><input type="image" src="img/main/game/red/3/3-4.png" id="txt36"
+						class="select 9" value="椅子が隠れるように物が置いてある"></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 赤２ -->
+		<div class="box10">
+			<div class="trigger10" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops10">
+					<li><input type="image" src="img/main/game/red/2/2-1.png"
+						id="txt37" class="select 10" value="机までの距離が遠い" /></li>
+					<li><input type="image" src="img/main/game/red/2/2-2.png" id="txt38"
+						class="select 10" value="前に2個椅子が置いてあるのに置いている"></li>
+					<li><input type="image" src="img/main/game/red/2/2-3.png"
+						id="txt39" class="select 10" value="修繕された跡がある"></li>
+					<li><input type="image" src="img/main/game/red/2/2-4.png" id="txt40"
+						class="select 10" value="座りにいけない位置にある"></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 赤４ -->
+		<div class="box11">
+			<div class="trigger11" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops11">
+					<li><input type="image" src="img/main/game/red/4/4-1.png"
+						id="txt41" class="select 11" value="机の角に椅子が配置されている" /></li>
+					<li><input type="image" src="img/main/game/red/4/4-2.png" id="txt42"
+						class="select 11" value="椅子の色が他と違う"></li>
+					<li><input type="image" src="img/main/game/red/4/4-3.png"
+						id="txt43" class="select 11" value="椅子の種類が他と違う"></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 赤５ -->
+		<div class="box12">
+			<div class="trigger12" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops12">
+					<li><input type="image" src="img/main/game/red/5/5-1.png"
+						id="txt45" class="select 12" value="リモコンの向きがおかしい" /></li>
+					<li><input type="image" src="img/main/game/red/5/5-2.png" id="txt46"
+						class="select 12" value="客席にリモコンが置いてある"></li>
+					<li><input type="image" src="img/main/game/red/5/5-3.png"
+						id="txt47" class="select 12" value="同じ場所にリモコンが3個ある"></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 青８ -->
+		<div class="box13">
+			<div class="trigger13" id="circle_btn2"></div>
+			<div class="popcircle">
+				<ul id="pops13">
+					<li><input type="image" src="img/main/game/blue/8/8-1.png"
+						id="txt49" class="select 13" value="雑巾のようなものが放置されている" /></li>
+					<li><input type="image" src="img/main/game/blue/8/8-2.png" id="txt50"
+						class="select 13" value="机の上が片付けられていない"></li>
+					<li><input type="image" src="img/main/game/blue/8/8-3.png"
+						id="txt51" class="select 13" value="布巾が乱雑に置かれている"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script src="./js/minjs/jquery-3.3.1.min.js"></script>
+	<script src="./js/jquery.simple.timer.js"></script>
+	<script src="./js/jquery.easing.1.3.js"></script>
+	<script src="./js/jquery.popcircle.1.0.js"></script>
+	<script src="./js/main.js">
+
+	</script>
+
+</body>
+
+</html>
