@@ -4,7 +4,7 @@ public class ProductDTO {
 	static String name;
 	static int stage;
 	private String mamberName,stageName,rankName;
-	private int score;
+	private String score;
 	public String getMamberName() {
 		return mamberName;
 	}
@@ -23,10 +23,11 @@ public class ProductDTO {
 	public void setRankName(String rankName) {
 		this.rankName = rankName;
 	}
-	public int getScore() {
+
+	public String getScore() {
 		return score;
 	}
-	public void setScore(int score) {
+	public void setScore(String score) {
 		this.score = score;
 	}
 	public static String getName() {

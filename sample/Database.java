@@ -133,7 +133,7 @@ public class Database {
 				dto.setMamberName(rs.getString("member.name"));
 				dto.setStageName(rs.getString("stage.name"));
 				dto.setRankName(rs.getString("rank.name"));
-				dto.setScore(Integer.parseInt(rs.getString("score.score")));
+				dto.setScore(rs.getString("score.score"));
 
 
 				product_tbl.add(dto);
