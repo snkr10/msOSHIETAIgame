@@ -929,6 +929,7 @@ ul.cp_list li {
   background-color: rgb(170, 225, 255);
   border-radius: 20px;
   opacity: 0;
+  cursor: pointer;
 }
 ul.cp_list li:after,
 ul.cp_list li:before{
