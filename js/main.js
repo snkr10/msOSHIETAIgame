@@ -3234,4 +3234,106 @@ function show(data) {
     }
 }
 
+//新入隊員割合表示アニメーション
+$(function(){
+    var countElm = $('.propCount'),
+    countSpeed = 10;
 
+    countElm.each(function(){
+        var self = $(this),
+        countMax = self.attr('data-num'),
+        thisCount = self.text(),
+        countTimer;
+
+        function timer(){
+            countTimer = setInterval(function(){
+                var countNext = thisCount++;
+                self.text('新入隊員の'+countNext+'％');
+
+                if(countNext == countMax){
+                    clearInterval(countTimer);
+                }
+            },countSpeed);
+        }
+        timer();
+    });
+
+});
+
+// スコア表示アニメーション
+$(function(){
+    var countElm = $('.scoreCount'),
+    countSpeed = 10;
+
+    countElm.each(function(){
+        var self = $(this),
+        countMax = self.attr('data-num'),
+        thisCount = self.text(),
+        countTimer;
+
+        function timer(){
+            countTimer = setInterval(function(){
+                var countNext = thisCount++;
+                self.text(countNext+'点');
+
+                if(countNext == countMax){
+                    clearInterval(countTimer);
+                }
+            },countSpeed);
+        }
+        timer();
+    });
+
+});
+
+// 満足度表示アニメーション
+$(function(){
+    var countElm = $('.levelCount'),
+    countSpeed = 10;
+
+    countElm.each(function(){
+        var self = $(this),
+        countMax = self.attr('data-num'),
+        thisCount = self.text(),
+        countTimer;
+
+        function timer(){
+            countTimer = setInterval(function(){
+                var countNext = thisCount++;
+                self.text(countNext+'％');
+
+                if(countNext == countMax){
+                    clearInterval(countTimer);
+                }
+            },countSpeed);
+        }
+        timer();
+    });
+
+});
+
+// 満足度UP表示アニメーション
+$(function(){
+    var countElm = $('.upCount'),
+    countSpeed = 10;
+
+    countElm.each(function(){
+        var self = $(this),
+        countMax = self.attr('data-num'),
+        thisCount = self.text(),
+        countTimer;
+
+        function timer(){
+            countTimer = setInterval(function(){
+                var countNext = thisCount++;
+                self.text(countNext+'％ＵＰ');
+
+                if(countNext == countMax){
+                    clearInterval(countTimer);
+                }
+            },countSpeed);
+        }
+        timer();
+    });
+
+});
