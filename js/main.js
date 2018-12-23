@@ -2413,6 +2413,32 @@ $(function() {
 	}
 });
 
+//新入隊員割合表示アニメーション
+$(function(){
+    var countElm = $('.propCount'),
+    countSpeed = 10;
+
+    countElm.each(function(){
+        var self = $(this),
+        countMax = self.attr('data-num'),
+        thisCount = self.text(),
+        countTimer;
+
+        function timer(){
+            countTimer = setInterval(function(){
+                var countNext = thisCount++;
+                self.text('新入隊員の'+countNext+'％');
+
+                if(countNext == countMax){
+                    clearInterval(countTimer);
+                }
+            },countSpeed);
+        }
+        timer();
+    });
+
+});
+
 // スコア表示アニメーション
 $(function(){
     var countElm = $('.scoreCount'),
