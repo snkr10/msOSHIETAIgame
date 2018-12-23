@@ -2516,3 +2516,7 @@ $(function(){
     });
 
 });
+
+function list1Click() {
+    document.location.href = "./game.html";
+  }
