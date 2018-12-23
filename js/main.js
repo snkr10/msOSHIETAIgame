@@ -2413,31 +2413,40 @@ $(function() {
 	}
 });
 
-//新入隊員割合表示アニメーション
 $(function(){
-    var countElm = $('.propCount'),
-    countSpeed = 10;
+	$.ajax({
+		contentType : "Content-Type: application/json; charset=UTF-8",
+		url : "./result",
 
-    countElm.each(function(){
-        var self = $(this),
-        countMax = self.attr('data-num'),
-        thisCount = self.text(),
-        countTimer;
+	}).done(function(data, status, xhr) {
+		// 正常
+		show(data);
+	}).fail(function(xhr, status, error) {
+		// 異常
+		$("#msg").append(xhr);
+		$("#msg").append(":" + status);
+		$("#msg").append(":" + error);
+	}).always(function(data, status, xhr) {
+		// 常に
+	});
 
-        function timer(){
-            countTimer = setInterval(function(){
-                var countNext = thisCount++;
-                self.text('新入隊員の'+countNext+'％');
+	function show(data) {
+		// var obj = JSON.parse(data);
+		var obj = data;
 
-                if(countNext == countMax){
-                    clearInterval(countTimer);
-                }
-            },countSpeed);
-        }
-        timer();
-    });
 
+
+		if (obj.ret == "true") {
+			var str1 = "<p class='scoreCount' data-num="+Number(obj.score)+">0</p>";
+
+			$("#ret1").html(str1);
+		} else {
+			$("#ret1").empty();
+		}
+
+	}
 });
+
 
 // スコア表示アニメーション
 $(function(){
@@ -2464,6 +2473,8 @@ $(function(){
     });
 
 });
+
+
 
 // 満足度表示アニメーション
 $(function(){
@@ -2516,38 +2527,3 @@ $(function(){
     });
 
 });
-
-$(function(){
-	$.ajax({
-			contentType : "Content-Type: application/json; charset=UTF-8",
-			url : "./result",
-			
-		}).done(function(data, status, xhr) {
-			// 正常
-			show(data);
-		}).fail(function(xhr, status, error) {
-			// 異常
-			$("#msg").append(xhr);
-			$("#msg").append(":" + status);
-			$("#msg").append(":" + error);
-		}).always(function(data, status, xhr) {
-			// 常に
-		});
-	function show(data) {
-		// var obj = JSON.parse(data);
-		var obj = data;
-
-		// ここに結果
-		$(".score").data-num(obj.str);
-		$("#msg").html(obj.str);
-		$("#msg").html(obj.str);
-
-		
-
-	}
-	
-});
-
-function list1Click() {
-    document.location.href = "./game.html";
-  }
