@@ -26,10 +26,12 @@
       <div class="topView">
         <p>スコア</p>
       </div>
-      <div class="score">
-        <p class="scoreCount" data-num="100">0</p>
+      <div class="score" id="ret1">
 
       </div>
+
+
+
     </div>
 
     <div class="viewUp">
