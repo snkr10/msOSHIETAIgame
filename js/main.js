@@ -2517,6 +2517,37 @@ $(function(){
 
 });
 
+$(function(){
+	$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./result",
+			
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	function show(data) {
+		// var obj = JSON.parse(data);
+		var obj = data;
+
+		// ここに結果
+		$(".score").data-num(obj.str);
+		$("#msg").html(obj.str);
+		$("#msg").html(obj.str);
+
+		
+
+	}
+	
+});
+
 function list1Click() {
     document.location.href = "./game.html";
   }
