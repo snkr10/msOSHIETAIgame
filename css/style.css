@@ -743,3 +743,136 @@ input.13 {
 	top: 0;
 	left: 0;
 }
+
+/* リザルト画面 */
+.viewName {
+  margin: 30px auto;
+  width: 1000px;
+  height: 150px;
+  /* background-color: rgb(255, 74, 238); */
+}
+
+.viewName p {
+  margin: 0;
+  text-align: center;
+  font-size: 100px;
+}
+
+.viewLank {
+  width: 1000px;
+  height: 700px;
+  /* background-color: rgb(74, 152, 255); */
+  float: left;
+}
+
+.prop {
+  margin: 10px auto;
+  width: 800px;
+  height: 150px;
+  /* background-color: rgb(53, 19, 185); */
+}
+
+.propCount {
+  margin: 0;
+  text-align: center;
+  font-size: 80px;
+}
+
+.lank {
+  margin: 0 auto;
+  width: 900px;
+  height: 520px;
+  /* background-color: rgb(161, 145, 223); */
+}
+
+.lank p {
+  margin: 0;
+  text-align: center;
+  font-size: 350px;
+}
+
+.viewScore {
+  margin-left: 20px;
+  width: 860px;
+  height: 400px;
+  /* background-color: rgb(246, 141, 43); */
+  float: left;
+}
+
+.topView {
+    margin: 10px auto;
+    width: 600px;
+    height: 100px;
+    /* background-color: rgb(255, 249, 105); */
+}
+
+.topView p {
+  margin: 0;
+  text-align: center;
+  font-size: 80px;
+}
+
+.score {
+  margin: 0 auto;
+  width: 810px;
+  height: 270px;
+  /* background-color: rgb(189, 255, 105); */
+}
+
+.scoreCount {
+  margin: 0;
+  text-align: center;
+  font-size: 200px;
+}
+
+.ten {
+  font-size: 100px;
+}
+
+.viewUp {
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 860px;
+  height: 350px;
+  /* background-color: rgb(246, 43, 43); */
+  float: left;
+}
+
+.topManzoku {
+    margin: 10px auto;
+    width: 600px;
+    height: 80px;
+    /* background-color: rgb(255, 213, 186); */
+}
+
+.topManzoku p {
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
+}
+
+.level {
+    margin: 0 auto;
+    width: 810px;
+    height: 150px;
+    /* background-color: rgb(90, 250, 250); */
+}
+
+.level p {
+  margin: 0;
+  text-align: center;
+  font-size: 120px;
+}
+
+.up {
+  margin: 0 auto;
+  width: 760px;
+  height: 90px;
+  /* background-color: rgb(58, 56, 85); */
+}
+
+.up p {
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
+}
