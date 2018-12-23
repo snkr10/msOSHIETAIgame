@@ -1040,2224 +1040,1377 @@ $('input.13').one('click',function(e) {
   });
 
 var list = new Array();
-$(function() {
-
-    $("#txt1").click(function() {
-
-        var param = {
-            str1 : $("#txt1").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
+var score = 0;
 
 $(function() {
-
-    $("#txt2").click(function() {
-
-        var param = {
-            str1 : $("#txt2").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-
-$(function() {
-
-    $("#txt3").click(function() {
-
-        var param = {
-            str1 : $("#txt3").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-
-$(function() {
-
-    $("#txt4").click(function() {
-
-        var param = {
-            str1 : $("#txt4").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-
-$(function() {
-
-    $("#txt5").click(function() {
-
-        var param = {
-            str1 : $("#txt5").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-
-$(function() {
-
-    $("#txt6").click(function() {
-
-        var param = {
-            str1 : $("#txt6").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-
-$(function() {
-
-    $("#txt7").click(function() {
-
-        var param = {
-            str1 : $("#txt7").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-
-$(function() {
-
-    $("#txt8").click(function() {
-
-        var param = {
-            str1 : $("#txt8").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt9").click(function() {
-
-        var param = {
-            str1 : $("#txt9").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt10").click(function() {
-
-        var param = {
-            str1 : $("#txt10").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt11").click(function() {
-
-        var param = {
-            str1 : $("#txt11").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt12").click(function() {
-
-        var param = {
-            str1 : $("#txt12").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt13").click(function() {
-
-        var param = {
-            str1 : $("#txt13").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt14").click(function() {
-
-        var param = {
-            str1 : $("#txt14").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt15").click(function() {
-
-        var param = {
-            str1 : $("#txt15").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt16").click(function() {
-
-        var param = {
-            str1 : $("#txt16").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt17").click(function() {
-
-        var param = {
-            str1 : $("#txt17").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt18").click(function() {
-
-        var param = {
-            str1 : $("#txt18").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt19").click(function() {
-
-        var param = {
-            str1 : $("#txt19").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt20").click(function() {
-
-        var param = {
-            str1 : $("#txt20").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt21").click(function() {
-
-        var param = {
-            str1 : $("#txt21").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt22").click(function() {
-
-        var param = {
-            str1 : $("#txt22").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt23").click(function() {
-
-        var param = {
-            str1 : $("#txt23").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt24").click(function() {
-
-        var param = {
-            str1 : $("#txt24").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt25").click(function() {
-
-        var param = {
-            str1 : $("#txt25").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt26").click(function() {
-
-        var param = {
-            str1 : $("#txt26").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt27").click(function() {
-
-        var param = {
-            str1 : $("#txt27").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-$(function() {
-
-    $("#txt28").click(function() {
-
-        var param = {
-            str1 : $("#txt28").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-var list = new Array();
-$(function() {
-
-    $("#txt29").click(function() {
-
-        var param = {
-            str1 : $("#txt29").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-
-$(function() {
-
-    $("#txt30").click(function() {
-
-        var param = {
-            str1 : $("#txt30").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt31").click(function() {
-
-        var param = {
-            str1 : $("#txt31").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-
-$(function() {
-
-    $("#txt32").click(function() {
-
-        var param = {
-            str1 : $("#txt32").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt33").click(function() {
-
-        var param = {
-            str1 : $("#txt33").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt34").click(function() {
-
-        var param = {
-            str1 : $("#txt34").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt35").click(function() {
-
-        var param = {
-            str1 : $("#txt35").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt36").click(function() {
-
-        var param = {
-            str1 : $("#txt36").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt37").click(function() {
-
-        var param = {
-            str1 : $("#txt37").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt38").click(function() {
-
-        var param = {
-            str1 : $("#txt38").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt39").click(function() {
-
-        var param = {
-            str1 : $("#txt39").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt40").click(function() {
-
-        var param = {
-            str1 : $("#txt40").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt41").click(function() {
-
-        var param = {
-            str1 : $("#txt41").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt42").click(function() {
-
-        var param = {
-            str1 : $("#txt42").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt43").click(function() {
-
-        var param = {
-            str1 : $("#txt43").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt44").click(function() {
-
-        var param = {
-            str1 : $("#txt44").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt45").click(function() {
-
-        var param = {
-            str1 : $("#txt45").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt46").click(function() {
-
-        var param = {
-            str1 : $("#txt46").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt47").click(function() {
-
-        var param = {
-            str1 : $("#txt47").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt48").click(function() {
-
-        var param = {
-            str1 : $("#txt48").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt49").click(function() {
-
-        var param = {
-            str1 : $("#txt49").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt50").click(function() {
-
-        var param = {
-            str1 : $("#txt50").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt51").click(function() {
-
-        var param = {
-            str1 : $("#txt51").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-
-}
-$(function() {
-
-    $("#txt52").click(function() {
-
-        var param = {
-            str1 : $("#txt52").val()
-
-        };
-        $.ajax({
-            contentType : "Content-Type: application/json; charset=UTF-8",
-            url : "./Production",
-            type : "POST",
-            data : JSON.stringify(param)
-        }).done(function(data, status, xhr) {
-            // 正常
-            show(data);
-        }).fail(function(xhr, status, error) {
-            // 異常
-            $("#msg").append(xhr);
-            $("#msg").append(":" + status);
-            $("#msg").append(":" + error);
-        }).always(function(data, status, xhr) {
-            // 常に
-        });
-    });
-});
-
-function show(data) {
-    // var obj = JSON.parse(data);
-    var obj = data;
-
-    //ここに結果
-    $("#msg").html(obj.str);
-
-    //ここにリスト
-    if (obj.ret == "true") {
-        var str1 = "<ul class='mitsuketa'>";
-        $.each(obj.ary, function(i, val) {
-
-            list.push(val);
-
-            for(var i=0;i<list.length;i++){
-                str1 += "<li class='item'>" + list[i] + "</li>";
-            }
-            console.log(i + ': ' + val);
-        });
-        str1 += "</ul>";
-        $("#ret1").html(str1);
-    } else {
-        $("#ret1").empty();
-    }
-}
-
-//新入隊員割合表示アニメーション
-$(function(){
-    var countElm = $('.propCount'),
-    countSpeed = 10;
-
-    countElm.each(function(){
-        var self = $(this),
-        countMax = self.attr('data-num'),
-        thisCount = self.text(),
-        countTimer;
-
-        function timer(){
-            countTimer = setInterval(function(){
-                var countNext = thisCount++;
-                self.text('新入隊員の'+countNext+'％');
-
-                if(countNext == countMax){
-                    clearInterval(countTimer);
-                }
-            },countSpeed);
-        }
-        timer();
-    });
-
+	$(document).ready(function() {
+
+	 setTimeout(a, 5000);
+
+	})
+	var a= function() {
+			var param = {
+				score : score,
+				judge :"true"
+
+			};
+			$.ajax({
+				contentType : "Content-Type: application/json; charset=UTF-8",
+				url : "./Production",
+				type : "POST",
+				data : JSON.stringify(param)
+			})
+		}
+
+
+
+	$("#txt1").click(function() {
+		score +=7;
+
+		var param = {
+			str1 : $("#txt1").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+			console.log(a);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt2").click(function() {
+
+		var param = {
+			str1 : $("#txt2").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt3").click(function() {
+
+		var param = {
+			str1 : $("#txt3").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt4").click(function() {
+
+		var param = {
+			str1 : $("#txt4").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+
+	$("#txt5").click(function() {
+		score += 2;
+
+		var param = {
+			str1 : $("#txt5").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt6").click(function() {
+		score += 6;
+
+		var param = {
+			str1 : $("#txt6").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt7").click(function() {
+		score += 8;
+
+		var param = {
+			str1 : $("#txt7").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt8").click(function() {
+		score += 4;
+
+		var param = {
+			str1 : $("#txt8").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt9").click(function() {
+
+		var param = {
+			str1 : $("#txt9").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt10").click(function() {
+
+		var param = {
+			str1 : $("#txt10").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+
+	$("#txt11").click(function() {
+
+		var param = {
+			str1 : $("#txt11").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt12").click(function() {
+
+		var param = {
+			str1 : $("#txt12").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt13").click(function() {
+
+		var param = {
+			str1 : $("#txt13").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt14").click(function() {
+
+		var param = {
+			str1 : $("#txt14").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt15").click(function() {
+
+		var param = {
+			str1 : $("#txt15").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt16").click(function() {
+
+		var param = {
+			str1 : $("#txt16").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt17").click(function() {
+
+		var param = {
+			str1 : $("#txt17").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt18").click(function() {
+
+		var param = {
+			str1 : $("#txt18").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt19").click(function() {
+
+		var param = {
+			str1 : $("#txt19").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt20").click(function() {
+
+		var param = {
+			str1 : $("#txt20").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt21").click(function() {
+
+		var param = {
+			str1 : $("#txt21").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt22").click(function() {
+
+		var param = {
+			str1 : $("#txt22").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt23").click(function() {
+
+		var param = {
+			str1 : $("#txt23").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt24").click(function() {
+
+		var param = {
+			str1 : $("#txt24").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt25").click(function() {
+
+		var param = {
+			str1 : $("#txt25").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt26").click(function() {
+
+		var param = {
+			str1 : $("#txt26").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt27").click(function() {
+
+		var param = {
+			str1 : $("#txt27").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt28").click(function() {
+
+		var param = {
+			str1 : $("#txt28").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt29").click(function() {
+
+		var param = {
+			str1 : $("#txt29").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt30").click(function() {
+
+		var param = {
+			str1 : $("#txt30").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt31").click(function() {
+
+		var param = {
+			str1 : $("#txt31").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt32").click(function() {
+
+		var param = {
+			str1 : $("#txt32").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt33").click(function() {
+		score += 2;
+
+		var param = {
+			str1 : $("#txt33").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt34").click(function() {
+		score += 1;
+
+		var param = {
+			str1 : $("#txt34").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt35").click(function() {
+		score += 6;
+
+		var param = {
+			str1 : $("#txt35").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt36").click(function() {
+		score += 10;
+
+		var param = {
+			str1 : $("#txt36").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt37").click(function() {
+		score += 3;
+
+		var param = {
+			str1 : $("#txt37").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt38").click(function() {
+		score += 10;
+
+		var param = {
+			str1 : $("#txt38").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt39").click(function() {
+		score += 5;
+
+		var param = {
+			str1 : $("#txt39").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt40").click(function() {
+		score += 2;
+
+		var param = {
+			str1 : $("#txt40").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt41").click(function() {
+		score += 5;
+
+		var param = {
+			str1 : $("#txt41").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt42").click(function() {
+		score += 6;
+
+		var param = {
+			str1 : $("#txt42").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt43").click(function() {
+		score += 7;
+
+		var param = {
+			str1 : $("#txt43").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt44").click(function() {
+
+		var param = {
+			str1 : $("#txt44").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt45").click(function() {
+		score += 5;
+
+		var param = {
+			str1 : $("#txt45").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt46").click(function() {
+		score += 3;
+
+		var param = {
+			str1 : $("#txt46").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt47").click(function() {
+		score += 1;
+
+		var param = {
+			str1 : $("#txt47").val(),
+			judge : "false"
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt48").click(function() {
+
+		var param = {
+			str1 : $("#txt48").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt49").click(function() {
+
+		var param = {
+			str1 : $("#txt49").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt50").click(function() {
+
+		var param = {
+			str1 : $("#txt50").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt51").click(function() {
+
+		var param = {
+			str1 : $("#txt51").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	$("#txt52").click(function() {
+
+		var param = {
+			str1 : $("#txt52").val(),
+			judge : "false"
+
+		};
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(param)
+		}).done(function(data, status, xhr) {
+			// 正常
+			show(data);
+		}).fail(function(xhr, status, error) {
+			// 異常
+			$("#msg").append(xhr);
+			$("#msg").append(":" + status);
+			$("#msg").append(":" + error);
+		}).always(function(data, status, xhr) {
+			// 常に
+		});
+	});
+
+	function show(data) {
+		// var obj = JSON.parse(data);
+		var obj = data;
+
+		// ここに結果
+		$("#msg").html(obj.str);
+
+		// ここにリスト
+		if (obj.ret == "true") {
+			var str1 = "<ul class='mitsuketa'>";
+			$.each(obj.ary, function(i, val) {
+
+				list.push(val);
+
+				for (var i = 0; i < list.length; i++) {
+					str1 += "<li class='item'>" + list[i] + "</li>";
+				}
+				console.log(i + ': ' + val);
+			});
+			str1 += "</ul>";
+			$("#ret1").html(str1);
+		} else {
+			$("#ret1").empty();
+		}
+
+	}
 });
 
 // スコア表示アニメーション
