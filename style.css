@@ -1,0 +1,1018 @@
+/*TOPボタン*/
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.container {
+	font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN',
+		'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo,
+		sans-serif;
+	padding-bottom: 40px;
+}
+
+.bnt-massage {
+	display: inline-block;
+	min-width: 100%;
+	text-align: center;
+	background-color: #000;
+	font-size: 20px;
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px 16px 10px 16px;
+	position: relative;
+	transition: .9s;
+	border: 1px solid #FFF;
+}
+
+.bnt-massage span {
+	display: block;
+	position: absolute;
+	background-color: #d9385f;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	line-height: 34px;
+	border-radius: 0 0 8px 0;
+	z-index: -1;
+	transition: .5s;
+}
+
+.bnt-massage:hover {
+	border-radius: 8px 0 0;
+}
+
+.bnt-massage:hover span {
+	transform: translateY(50px);
+}
+
+/* requestぺージ　背景 */
+.haikei {
+	position: relative;
+}
+
+/* requestぺージ　店 */
+.shop {
+	position: absolute;
+	top: 5px;
+	left: 0;
+}
+
+/* requestぺージ　ｐｃさわる男 */
+.pcman {
+	position: absolute;
+	top: 5px;
+	left: 50px;
+}
+
+/* requestページ　男 */
+.man {
+	position: absolute;
+	bottom: 0px;
+	right: 270px;
+}
+
+/* requestぺージ　日本 */
+.nihon {
+	position: absolute;
+	top: 50px;
+	right: 180px;
+}
+
+/* requestぺージ　ロゴ */
+.logo {
+	position: absolute;
+	top: 140px;
+	left: 300px;
+}
+
+/* requestぺージ　図形まる */
+.circle {
+	position: absolute;
+	top: 100px;
+	left: 300px;
+	width: 450px;
+	height: 450px;
+	background: rgb(254, 254, 254);
+	border-radius: 180px;
+}
+
+/* requestぺージ　ロゴ２ */
+.logo2 {
+	position: absolute;
+	top: 50px;
+	left: -10px;
+}
+
+/* requestぺージ　メール アニメ-ション */
+.mail {
+	position: absolute;
+	top: 140px;
+	right: 350px;
+	animation-name: move1;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes move1 {from { transform:translate(0, 0);
+
+}
+
+to {
+	transform: translate(-750px, 200px);
+}
+
+}
+.mail2 {
+	position: absolute;
+	top: 400px;
+	right: 450px;
+	animation-name: move2;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes move2 {from { transform:translate(0, 0);
+
+}
+
+to {
+	transform: translate(-650px, -50px);
+}
+
+}
+.mail3 {
+	position: absolute;
+	top: 600px;
+	right: 630px;
+	animation-name: move3;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes move3 {from { transform:translate(0, 0);
+
+}
+
+to {
+	transform: translate(-470px, -250px);
+}
+
+}
+.mail4 {
+	position: absolute;
+	top: 580px;
+	right: 850px;
+	animation-name: move4;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes move4 {from { transform:translate(0, 0);
+
+}
+
+to {
+	transform: translate(-250px, -220px);
+}
+
+}
+.mail5 {
+	position: absolute;
+	top: 700px;
+	right: 900px;
+	animation-name: move5;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes move5 {from { transform:translate(0, 0);
+
+}
+
+to {
+	transform: translate(-200px, -330px);
+}
+
+}
+
+/* requestページ ふきだし */
+.wrapper {
+	position: absolute;
+	display: inline-block;
+	top: 20px;
+	right: 50px;
+}
+
+.label {
+	position: absolute;
+	padding: 5px 15px;
+}
+
+.label-left-top {
+	left: 40px;
+	top: 130px;
+	font-size: 22px;
+}
+
+.wrapper2 {
+	position: absolute;
+	display: inline-block;
+	top: 20px;
+	right: 480px;
+}
+
+.label2 {
+	position: absolute;
+	padding: 5px 15px;
+}
+
+.label-left-top2 {
+	left: 80px;
+	top: 110px;
+	font-size: 25px;
+}
+
+/* ゲームページ　タイマー */
+.timerback {
+	position: relative;
+	width: 300px;
+	/*幅*/
+	height: 300px;
+	/*高さ*/
+	border-radius: 50%;
+	/*角丸*/
+	top: 50px;
+	left: 1500px;
+	background-color: rgb(61, 212, 76);
+}
+
+.timer, .timer-done, .timer-loop {
+	position: absolute;
+	font-size: 150px;
+	color: black;
+	font-weight: bold;
+	padding: 10px;
+	top: 35px;
+	left: 40px;
+}
+
+.jst-hours {
+	float: left;
+}
+
+.jst-minutes {
+	float: left;
+}
+
+.jst-seconds {
+	float: left;
+}
+
+.jst-clearDiv {
+	clear: both;
+}
+
+.jst-timeout {
+	color: red;
+	font-size: 100px;
+	top: 75px;
+}
+
+/* みつけたものリスト */
+.list {
+	position: relative;
+	top: 100px;
+	left: 1400px;
+	padding: 0;
+	margin: 0;
+	width: 500px;
+	height: 500px;
+	border: dashed 2px #668ad8;
+	/*破線 太さ 色*/
+	background: #f1f8ff;
+	/*背景色*/
+}
+
+ul.mitsuketa {
+	padding-left: 0;
+}
+
+ul.mitsuketa li {
+	position: relative;
+	list-style-type: none !important;
+	/*ポチ消す*/
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	margin-bottom: 5px;
+	line-height: 1.5;
+	background: #dbebf8;
+	vertical-align: middle;
+	color: #505050;
+	border-radius: 15px 0px 0px 15px;
+	/*左側の角丸く*/
+}
+
+ul.mitsuketa li:before {
+	/*疑似要素*/
+	display: inline-block;
+	vertical-align: middle;
+	/*以下白丸つくる*/
+	content: '';
+	width: 1em;
+	height: 1em;
+	background: #fff;
+	border-radius: 50%;
+	margin-right: 8px;
+}
+
+/* リストアニメーション */
+.item {
+	opacity: 1;
+}
+
+.item:nth-child(1) {
+	-webkit-animation: example 0.5s ease 0.5s 1 forwards;
+	animation: example 0.5s ease 0.5s 1 forwards;
+}
+
+.item:nth-child(2) {
+	-webkit-animation: example 0.5s ease 1s 1 forwards;
+	animation: example 0.5s ease 1s 1 forwards;
+}
+
+.item:nth-child(3) {
+	-webkit-animation: example 0.5s ease 1.5s 1 forwards;
+	animation: example 0.5s ease 1.5s 1 forwards;
+}
+
+.item:nth-child(4) {
+	-webkit-animation: example 0.5s ease 2.0s 1 forwards;
+	animation: example 0.5s ease 2.0s 1 forwards;
+}
+
+@
+-webkit-keyframes example { 100% {
+	opacity: 1;
+}
+
+}
+@
+keyframes example { 100% {
+	opacity: 1;
+}
+
+}
+
+/* イベント用ボタン */
+.block {
+	height: 20px;
+	width: 100px;
+	background-color: black;
+}
+
+.box1 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 220px;
+	left: 100px;
+}
+
+.box2 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 220px;
+	left: 240px;
+}
+
+.box3 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 310px;
+	left: 450px;
+}
+
+.box4 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 340px;
+	left: 580px;
+}
+
+.box5 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 360px;
+	left: 700px;
+}
+
+.box6 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 330px;
+	left: 790px;
+}
+
+.box7 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 440px;
+	left: 870px;
+}
+
+.box8 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 300px;
+	left: 1180px;
+}
+
+.box9 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 450px;
+	left: 500px;
+}
+
+.box10 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 500px;
+	left: 340px;
+}
+
+.box11 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 650px;
+	left: 460px;
+}
+
+.box12 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 590px;
+	left: 800px;
+}
+
+.box13 {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	float: left;
+	top: 650px;
+	left: 1090px;
+}
+
+.trigger2 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger1 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger3 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger4 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	pointer-events: all;
+	opacity: 0;
+}
+
+.trigger5 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger6 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger7 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger8 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger9 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger10 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger11 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger12 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.trigger13 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 100px;
+	top: 100px;
+	background-image: url(../img/main/game/blue.png);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.popcircle {
+	position: absolute;
+	z-index: 9;
+	width: 100px;
+	height: 100px;
+}
+
+.popcircle ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	height: auto;
+	cursor: pointer;
+	pointer-events: none;
+}
+
+.popcircle ul li {
+	top: 100px;
+	left: 100px;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+}
+
+
+
+input.select {
+	width: 500px;
+	height: auto;
+	opacity: 0;
+	transition: .3s;
+}
+
+input.show {
+	opacity: 1;
+}
+
+input.1 {
+	opacity: 1;
+}
+
+input.2 {
+	opacity: 1;
+}
+
+input.3 {
+	opacity: 1;
+}
+
+input.4 {
+	opacity: 1;
+}
+
+input.5 {
+	opacity: 1;
+}
+
+input.6 {
+	opacity: 1;
+}
+
+input.7 {
+	opacity: 1;
+}
+
+input.8 {
+	opacity: 1;
+}
+
+input.9 {
+	opacity: 1;
+}
+
+input.10 {
+	opacity: 1;
+}
+
+input.11 {
+	opacity: 1;
+}
+
+input.12 {
+	opacity: 1;
+}
+
+input.13 {
+	opacity: 1;
+}
+
+/* ゲーム背景 */
+.gamehaikei {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* リザルト画面 */
+.viewName {
+  margin: 30px auto;
+  width: 1000px;
+  height: 150px;
+  /* background-color: rgb(255, 74, 238); */
+}
+
+.viewName p {
+  margin: 0;
+  text-align: center;
+  font-size: 100px;
+}
+
+.viewLank {
+  width: 1000px;
+  height: 700px;
+  /* background-color: rgb(74, 152, 255); */
+  float: left;
+}
+
+.prop {
+  margin: 10px auto;
+  width: 800px;
+  height: 150px;
+  /* background-color: rgb(53, 19, 185); */
+}
+
+.propCount {
+  margin: 0;
+  text-align: center;
+  font-size: 80px;
+}
+
+.lank {
+  margin: 0 auto;
+  width: 900px;
+  height: 520px;
+  /* background-color: rgb(161, 145, 223); */
+}
+
+.lank p {
+  margin: 0;
+  text-align: center;
+  font-size: 350px;
+}
+
+.viewScore {
+  margin-left: 20px;
+  width: 860px;
+  height: 400px;
+  /* background-color: rgb(246, 141, 43); */
+  float: left;
+}
+
+.topView {
+    margin: 10px auto;
+    width: 600px;
+    height: 100px;
+    /* background-color: rgb(255, 249, 105); */
+}
+
+.topView p {
+  margin: 0;
+  text-align: center;
+  font-size: 80px;
+}
+
+.score {
+  margin: 0 auto;
+  width: 810px;
+  height: 270px;
+  /* background-color: rgb(189, 255, 105); */
+}
+
+.scoreCount {
+  margin: 0;
+  text-align: center;
+  font-size: 200px;
+}
+
+.ten {
+  font-size: 100px;
+}
+
+.viewUp {
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 860px;
+  height: 350px;
+  /* background-color: rgb(246, 43, 43); */
+  float: left;
+}
+
+.topManzoku {
+    margin: 10px auto;
+    width: 600px;
+    height: 80px;
+    /* background-color: rgb(255, 213, 186); */
+}
+
+.topManzoku p {
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
+}
+
+.level {
+    margin: 0 auto;
+    width: 810px;
+    height: 150px;
+    /* background-color: rgb(90, 250, 250); */
+}
+
+.level p {
+  margin: 0;
+  text-align: center;
+  font-size: 120px;
+}
+
+.up {
+  margin: 0 auto;
+  width: 760px;
+  height: 90px;
+  /* background-color: rgb(58, 56, 85); */
+}
+
+.up p {
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
+}
+
+/* 依頼選択画面 */
+.stage {
+  position: absolute;
+  margin-right: 10px;
+  top: 0;
+  right: 0;
+  width: 850px;
+  height: 975px;
+  /* background-color: rgb(249, 149, 45); */
+}
+
+.topStage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 850px;
+  height: 200px;
+  /* background-color: rgb(77, 255, 228); */
+}
+
+.topStage p {
+  text-align: center;
+  font-size: 150px;
+}
+
+.stageList {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  width: 850px;
+  height: 775px;
+  /* background-color: rgb(104, 230, 38); */
+}
+
+ul.cp_list {
+	padding: 0.5em;
+	list-style-type: none;
+  overflow:auto;
+  width: 850px;
+  height: 775px;
+}
+ul.cp_list li {
+	position: relative;
+  text-align: center;
+  font-size: 2em;
+	padding: 0.5em 1em 0.5em 2.3em;
+  height: 80px;
+	margin-bottom:5px;
+	border-bottom: 3px solid rgba(25,118,210,1);
+  background-color: rgb(170, 225, 255);
+  border-radius: 20px;
+  opacity: 0;
+}
+ul.cp_list li:after,
+ul.cp_list li:before{
+	content:'';
+	position: absolute;
+	border-radius: 50%;
+}
+ul.cp_list li:before {
+	top: 50%;
+	left: 0.2em;
+	width: 17px;
+	height: 17px;
+	background: rgba(25,118,210, 1);
+	transform: translateY(-50%);
+}
+ul.cp_list li:after {
+	top: 1.1em;
+	left: 0.4em;
+	width: 14px;
+	height: 14px;
+	background: rgba(25,118,210, 0.5);
+}
+
+ul.cp_list li:nth-child(1) {
+  -webkit-animation: example 0.5s ease 0.1s 1 forwards;
+  animation: example 0.5s ease 0.1s 1 forwards;
+}
+
+ul.cp_list li:nth-child(2) {
+  -webkit-animation: example 0.5s ease 0.2s 1 forwards;
+  animation: example 0.5s ease 0.2s 1 forwards;
+}
+
+ul.cp_list li:nth-child(3) {
+  -webkit-animation: example 0.5s ease 0.3s 1 forwards;
+  animation: example 0.5s ease 0.3s 1 forwards;
+}
+
+ul.cp_list li:nth-child(4) {
+  -webkit-animation: example 0.5s ease 0.4s 1 forwards;
+  animation: example 0.5s ease 0.4s 1 forwards;
+}
+
+ul.cp_list li:nth-child(5) {
+  -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+  animation: example 0.5s ease 0.5s 1 forwards;
+}
+
+ul.cp_list li:nth-child(6) {
+  -webkit-animation: example 0.5s ease 0.6s 1 forwards;
+  animation: example 0.5s ease 0.6s 1 forwards;
+}
+ul.cp_list li:nth-child(7) {
+  -webkit-animation: example 0.5s ease 0.7s 1 forwards;
+  animation: example 0.5s ease 0.7s 1 forwards;
+}
+ul.cp_list li:nth-child(8) {
+  -webkit-animation: example 0.5s ease 0.8s 1 forwards;
+  animation: example 0.5s ease 0.8s 1 forwards;
+}
+ul.cp_list li:nth-child(9) {
+  -webkit-animation: example 0.5s ease 0.9s 1 forwards;
+  animation: example 0.5s ease 0.9s 1 forwards;
+}
+ul.cp_list li:nth-child(10) {
+  -webkit-animation: example 0.5s ease 1s 1 forwards;
+  animation: example 0.5s ease 1s 1 forwards;
+}
+ul.cp_list li:nth-child(11) {
+  -webkit-animation: example 0.5s ease 1.1s 1 forwards;
+  animation: example 0.5s ease 1.1s 1 forwards;
+}
+ul.cp_list li:nth-child(12) {
+  -webkit-animation: example 0.5s ease 1.2s 1 forwards;
+  animation: example 0.5s ease 1.2s 1 forwards;
+}
+
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
