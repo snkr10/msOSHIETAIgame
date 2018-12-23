@@ -32,13 +32,6 @@ public class result extends HttpServlet implements ServletContextListener {
 		ArrayList<ProductDTO> product_tbl = new ArrayList<ProductDTO>();
 
 
-		BufferedReader buffer = new BufferedReader(request.getReader());
-		String reqJson = buffer.readLine();
-
-
-		ObjectMapper mapper = new ObjectMapper();
-		Map<String, String> reqMap = mapper.readValue(reqJson, new TypeReference<Map<String, String>>() {
-		});
 
 		Database db=new Database();
 
@@ -60,7 +53,12 @@ public class result extends HttpServlet implements ServletContextListener {
 		resMap.put("stageName", stageName);
 		resMap.put("score", score);
 
+		BufferedReader buffer = new BufferedReader(request.getReader());
+		String reqJson = buffer.readLine();
 
+		ObjectMapper mapper = new ObjectMapper();
+		Map<String, String> reqMap = mapper.readValue(reqJson, new TypeReference<Map<String, String>>() {
+		});
 		String resJson = mapper.writeValueAsString(resMap);
 
 		response.setContentType("application/json");
