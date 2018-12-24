@@ -1045,7 +1045,7 @@ var score = 0;
 $(function() {
 	$(document).ready(function() {
 
-	 setTimeout(a, 5000);
+	 setTimeout(a, 45000);
 
 	})
 	var a= function() {
@@ -2413,117 +2413,5 @@ $(function() {
 	}
 });
 
-$(function(){
-	$.ajax({
-		contentType : "Content-Type: application/json; charset=UTF-8",
-		url : "./result",
-
-	}).done(function(data, status, xhr) {
-		// 正常
-		show(data);
-	}).fail(function(xhr, status, error) {
-		// 異常
-		$("#msg").append(xhr);
-		$("#msg").append(":" + status);
-		$("#msg").append(":" + error);
-	}).always(function(data, status, xhr) {
-		// 常に
-	});
-
-	function show(data) {
-		// var obj = JSON.parse(data);
-		var obj = data;
 
 
-
-		if (obj.ret == "true") {
-			var str1 = "<p class='scoreCount' data-num="+Number(obj.score)+">0</p>";
-
-			$("#ret1").html(str1);
-		} else {
-			$("#ret1").empty();
-		}
-
-	}
-});
-
-
-// スコア表示アニメーション
-$(function(){
-    var countElm = $('.scoreCount'),
-    countSpeed = 10;
-
-    countElm.each(function(){
-        var self = $(this),
-        countMax = self.attr('data-num'),
-        thisCount = self.text(),
-        countTimer;
-
-        function timer(){
-            countTimer = setInterval(function(){
-                var countNext = thisCount++;
-                self.text(countNext+'点');
-
-                if(countNext == countMax){
-                    clearInterval(countTimer);
-                }
-            },countSpeed);
-        }
-        timer();
-    });
-
-});
-
-
-
-// 満足度表示アニメーション
-$(function(){
-    var countElm = $('.levelCount'),
-    countSpeed = 10;
-
-    countElm.each(function(){
-        var self = $(this),
-        countMax = self.attr('data-num'),
-        thisCount = self.text(),
-        countTimer;
-
-        function timer(){
-            countTimer = setInterval(function(){
-                var countNext = thisCount++;
-                self.text(countNext+'％');
-
-                if(countNext == countMax){
-                    clearInterval(countTimer);
-                }
-            },countSpeed);
-        }
-        timer();
-    });
-
-});
-
-// 満足度UP表示アニメーション
-$(function(){
-    var countElm = $('.upCount'),
-    countSpeed = 10;
-
-    countElm.each(function(){
-        var self = $(this),
-        countMax = self.attr('data-num'),
-        thisCount = self.text(),
-        countTimer;
-
-        function timer(){
-            countTimer = setInterval(function(){
-                var countNext = thisCount++;
-                self.text(countNext+'％ＵＰ');
-
-                if(countNext == countMax){
-                    clearInterval(countTimer);
-                }
-            },countSpeed);
-        }
-        timer();
-    });
-
-});
