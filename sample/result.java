@@ -42,13 +42,16 @@ public class result extends HttpServlet implements ServletContextListener {
 			rankName=dto.getRankName();
 			stageName=dto.getStageName();
 			score=dto.getScore();
+			System.out.println("aaa"+dto.getScore());
 		}
+		System.out.println("通過");
+		System.out.println(score);
 
 
 
 		Map<String, Object> resMap = new HashMap<>();
 		resMap.put("ret", "true");
-		resMap.put("mamberName", memberName);
+		resMap.put("memberName", memberName);
 		resMap.put("rankName", rankName);
 		resMap.put("stageName", stageName);
 		resMap.put("score", score);

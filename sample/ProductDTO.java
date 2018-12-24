@@ -29,6 +29,7 @@ public class ProductDTO {
 	}
 	public void setScore(String score) {
 		this.score = score;
+		System.out.println("スコア"+score);
 	}
 	public static String getName() {
 		return name;

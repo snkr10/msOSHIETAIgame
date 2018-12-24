@@ -1,4 +1,5 @@
 package sample;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -14,7 +15,7 @@ public class Database {
 	ResultSet rs = null;
 
 	ArrayList<ProductDTO> product_tbl = new ArrayList<ProductDTO>();
-	private int id;
+	static int id;
 
 	public Database() {
 		try {
@@ -31,7 +32,7 @@ public class Database {
 	}
 
 	public void insertScore(int score) {
-		 id =loadId();
+		id = loadId();
 		int stage = ProductDTO.getStage();
 
 		String sql = "insert into score values (" + id + "," + stage + "," + score + ");";
@@ -42,6 +43,27 @@ public class Database {
 		} catch (SQLException e) {
 			System.out.print("2b");
 		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (st != null) {
+				try {
+					st.close();
+				} catch (Exception e2) {
+					// TODO: handle exception
+				}
+			}
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (Exception e2) {
+					// TODO: handle exception
+				}
+			}
 
 		}
 
@@ -73,7 +95,7 @@ public class Database {
 	}
 
 	public int loadPw(int n) {
-		int count =0;
+		int count = 0;
 
 		String sql = "SELECT count(*) FROM member WHERE pass = " + n + ";";
 
@@ -94,7 +116,7 @@ public class Database {
 	}
 
 	public int loadId() {
-		 id = 0;
+		id = 0;
 
 		String sql = "SELECT MAX(id) FROM member ;";
 
@@ -117,23 +139,21 @@ public class Database {
 	public ArrayList<ProductDTO> loadScore() {
 
 		String sql = "SELECT member.name,stage.name,rank.name,score.score FROM score "
-				+ "INNER JOIN member ON score.member_id = member.id "
-				+ "INNER JOIN stage ON score.stage_id = stage.id "
-				+ "INNER JOIN rank ON rank.min<= score.score and score.score <= rank.max "
-				+ "WHERE score.member_id = "+id;
+				+ "INNER JOIN member ON score.member_id = member.id " + "INNER JOIN stage ON score.stage_id = stage.id "
+				+ "INNER JOIN rank ON rank.min<= score.score and score.score <= rank.max " + "WHERE score.member_id = "
+				+ id;
 		System.out.println(sql);
 		try {
 			rs = st.executeQuery(sql);
-
 
 			while (rs.next()) {
 				// ArrayList<String> rec = new ArrayList<String>();
 
 				ProductDTO dto = new ProductDTO();
-				dto.setMamberName(rs.getString("member.name"));
-				dto.setStageName(rs.getString("stage.name"));
-				dto.setRankName(rs.getString("rank.name"));
-				dto.setScore(rs.getString("score.score"));
+					dto.setMamberName(rs.getString("member.name"));
+					dto.setStageName(rs.getString("stage.name"));
+					dto.setRankName(rs.getString("rank.name"));
+					dto.setScore(rs.getString("score.score"));
 
 
 				product_tbl.add(dto);

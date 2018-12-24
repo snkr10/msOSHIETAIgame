@@ -42,9 +42,8 @@ public class regist extends HttpServlet {
 		int pw=db.insertMember(name);
 		System.out.println(name+"隊員のPW"+pw);
 
-		System.out.println(name);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/nakai.html");
+		RequestDispatcher rd = request.getRequestDispatcher("/game.html");
 		rd.forward(request, response);
 	}
 

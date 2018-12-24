@@ -9,15 +9,15 @@
 </head>
 <body>
 
-<div class="viewName">
-      <p>○○隊員の功績</p>
+<div class="viewName" id="name">
+
     </div>
 
     <div class="viewLank">
       <div class="prop">
         <p class="propCount" data-num="100">0</p>
       </div>
-      <div class="lank">
+      <div class="lank"id="rank">
         <p>大佐</p>
       </div>
     </div>
@@ -26,9 +26,7 @@
       <div class="topView">
         <p>スコア</p>
       </div>
-      <div class="score" id="ret1">
-
-      </div>
+      <div class="score" id="ajax"></div>
 
 
 
@@ -48,7 +46,7 @@
 
     <script type="text/javascript" src="js/minjs/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./js/minjs/anime.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-
+    <script type="text/javascript" src="js/result.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
 </body>
 </html>
