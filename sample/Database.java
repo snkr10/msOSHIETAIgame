@@ -35,7 +35,7 @@ public class Database {
 		id = loadId();
 		int stage = ProductDTO.getStage();
 
-		String sql = "insert into score values (" + id + "," + stage + "," + score + ");";
+		String sql = "insert into score (member_id,stage_id,score) values (" + id + "," + stage + "," + score + ");";
 		System.out.println(sql);
 		try {
 			st.executeUpdate(sql);
@@ -68,6 +68,34 @@ public class Database {
 		}
 
 	}
+
+
+	public String selectMember(String num) {
+
+		String sql = "SELECT name FROM member WHERE pass = '"+num+"' ;";
+		System.out.println(sql);
+		String ms=null;
+		System.out.println(sql);
+		try {
+			st.executeUpdate(sql);
+
+			if (rs.next()) {
+				 ms = rs.getString("name");
+				 System.out.println("通過１");
+			}
+
+		} catch (SQLException e) {
+			System.out.print("1b");
+			ms="unknown";
+		} finally {
+
+		}
+		System.out.println("通過④");
+		return ms;
+
+
+	}
+
 
 	public int insertMember(String name) {
 		Random rd = new Random();
