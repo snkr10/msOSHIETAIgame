@@ -2413,5 +2413,19 @@ $(function() {
 	}
 });
 
+$(function() {
+	$("#stage_select").click(function() {
+		var stage=$("#stage_select").val()
+
+		$.ajax({
+			contentType : "Content-Type: application/json; charset=UTF-8",
+			url : "./Production",
+			type : "POST",
+			data : JSON.stringify(stage)
+
+		});
+	});
+});
+
 
 

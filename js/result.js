@@ -38,12 +38,29 @@ $(document).ready(function() {
 			console.log(str1);
 			var str2="<p>"+obj.rankName+"</p>";
 			var str3 = "<p>"+obj.memberName+"隊員の功績</p>";
-
+			var str4;
+			if(obj.rankName ==="新兵"){
+				str4=30;
+			}else if(obj.rankName === "曹長"){
+				str4=50;
+			}else if(obj.rankName === "准尉"){
+				str4=70;
+			}else if(obj.rankName === "大尉"){
+				str4=85;
+			}else if(obj.rankName === "大佐"){
+				str4=90;
+			}else if(obj.rankName === "大将"){
+				str4=98;
+			}
+			var str5 =" <p class=levelCount data-num=\""+str4+"\">0</p>";
+			console.log(str2);
 
 			$("#ajax").html(str1);
 			$("#rank").html(str2);
 			$("#name").html(str3);
+			$("#manzoku").html(str5);
 			anime();
+			manzoku();
 		} else {
 			$("#ajax").empty();
 		}
@@ -79,7 +96,7 @@ $(document).ready(function() {
 
 
 	//満足度表示アニメーション
-	$(function(){
+	function manzoku(){
 		console.log("anime");
 	 var countElm = $('.levelCount'),
 	 countSpeed = 10;
@@ -103,7 +120,7 @@ $(document).ready(function() {
 	     timer();
 	 });
 
-	});
+	}
 
 	//満足度UP表示アニメーション
 	$(function(){
